@@ -1,1 +1,3 @@
-{{yield}}
+<h3><strong>{{#link-to 'category' category.id}}{{category.title}}{{/link-to}}</strong></h3>
+{{#each category.listings as |listing|}}<p> {{listing.listingName}} --Date: {{format-date listing.date_added}}</p>
+{{/each}}

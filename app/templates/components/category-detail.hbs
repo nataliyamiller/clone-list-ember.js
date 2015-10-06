@@ -1,0 +1,10 @@
+<div class="col-md-7">
+{{#each category.listings as |listing|}}
+  <p>{{listing.listingName}} --Date: {{format-date listing.date_added}} --Image: {{listing.image}}</p>
+  {{/each}}
+</div>
+
+<div class="col-md-5">
+<h4 class="add">Add new listing to this category</h4>
+{{new-listing saveListing="saveListing" category=category}}
+</div>
