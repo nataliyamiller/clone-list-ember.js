@@ -17,6 +17,9 @@ export default Ember.Component.extend({
         category: this.get('category') ? this.get('category') : ""
       };
       this.set('listingName', ''),
+      this.set('description', ''),
+      this.set('contactInfo', ''),
+      this.set('image'),
       this.set('addNewListing', false),
       this.sendAction('saveListing', params);
     }

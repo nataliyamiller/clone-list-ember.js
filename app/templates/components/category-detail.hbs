@@ -1,7 +1,9 @@
 <div class="col-md-7">
-{{#each category.listings as |listing|}}
-  <p>{{listing.listingName}} --Date: {{format-date listing.date_added}} --Image: {{listing.image}}</p>
+  <p>
+  {{#each category.listings as |listing|}}
+  {{listing-detail listing=listing}}
   {{/each}}
+</p>
 </div>
 
 <div class="col-md-5">
