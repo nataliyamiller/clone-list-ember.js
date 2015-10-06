@@ -1,3 +1,7 @@
-<!-- {{#each category.listings as |listing|}}
-  <p>{{listing.listingName}}</p>
-  {{/each}} -->
+<h5> {{listing.listingName}} --Date: {{format-date listing.date_added}}
+{{#if isImageShowing}}
+  <p><img src={{listing.image}} alt="no image" {{action 'imageHide'}}></p>
+{{else}}
+<button {{action 'imageShow'}}>Show image</button>
+{{/if}}
+</h5>
