@@ -1,7 +1,7 @@
 <div class="col-md-7">
   <p>
   {{#each category.listings as |listing|}}
-  {{listing-detail listing=listing}}
+  {{listing-detail listing=listing deleteListing="deleteListing" category=category}}
   {{/each}}
 </p>
 </div>
