@@ -1,4 +1,4 @@
-<h5> {{listing.listingName}} --Date: {{format-date listing.date_added}}
+<h5>{{#link-to 'city' city.id}}{{listing.listingName}} --Date: {{format-date listing.date_added}}{{/link-to}}
 {{#if isImageShowing}}
   <p><img src={{listing.image}} alt="no image" {{action 'imageHide'}}></p>
 {{else}}
