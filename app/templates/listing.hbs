@@ -1,2 +1,3 @@
-<h3>{{model.listingName}}</h3>
-<button class="btn-danger" {{action 'deleteListing' listing}}>Delete listing</button>
+<h4>{{model.listingName}}</h4>
+<h5>Date added: {{format-date model.date_added}}</h5>
+{{listing-page listing=model deleteListing="deleteListing"}}
