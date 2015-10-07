@@ -10,6 +10,12 @@ export default Ember.Component.extend({
       this.set('isImageShowing', false);
     },
 
+    // deleteListing(listing) {
+    //   if (confirm('Are you sure you want to delete this listing?')) {
+    //     this.sendAction('deleteListing', listing);
+    //   }
+    // },
+
     deleteListing(listing) {
       if (confirm('Are you sure you want to delete this listing?')) {
         this.sendAction('deleteListing', listing);

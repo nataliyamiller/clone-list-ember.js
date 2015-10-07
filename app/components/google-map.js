@@ -8,7 +8,9 @@ export default Ember.Component.extend({
         center: this.get('map').center(listing.get('latitude'), listing.get('longitude')),
         zoom: 15
       };
+
       this.get('map').findMap(container, options);
-    }
+      this.set('isMapShowing', true);
+    },
   }
 });
