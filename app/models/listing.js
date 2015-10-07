@@ -6,5 +6,7 @@ export default DS.Model.extend({
   contactInfo: DS.attr(),
   image: DS.attr(),
   date_added: DS.attr(),
+  latitude: DS.attr('number'),
+  longitude: DS.attr('number'),
   category: DS.belongsTo('category', {async: true})
 });

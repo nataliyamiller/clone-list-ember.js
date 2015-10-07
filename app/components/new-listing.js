@@ -13,13 +13,17 @@ export default Ember.Component.extend({
         description: this.get('description') ? this.get('description') : "",
         contactInfo: this.get('contactInfo') ? this.get('contactInfo') : "",
         image: this.get('image') ? this.get('image') : "",
+        latitude: this.get('latitude'),
+        longitude: this.get('longitude'),
         date_added: Date.now(),
         category: this.get('category') ? this.get('category') : ""
       };
       this.set('listingName', ''),
       this.set('description', ''),
       this.set('contactInfo', ''),
-      this.set('image'),
+      this.set('image', ''),
+      this.set('latitude', ''),
+      this.set('longitude', ''),
       this.set('addNewListing', false),
       this.sendAction('saveListing', params);
     }

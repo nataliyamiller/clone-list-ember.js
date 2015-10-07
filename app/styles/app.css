@@ -18,3 +18,12 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+body {
+  background-color: #CCFFFF;
+}
+
+.map-display {
+  height: 300px;
+  width: 300px;
+}
