@@ -1,7 +1,10 @@
-
+<br>
+<br>
 {{#if isImageShowing}}
   <p><img src={{listing.image}} alt="no-image" {{action 'imageHide'}}></p>
 {{else}}
-<button {{action 'imageShow'}}>Show image</button>
+<button class="btn-success btn-lg"{{action 'imageShow'}}>Show image</button>
 {{/if}}
-<button class="btn-danger" {{action 'deleteListing' listing}}>Delete listing</button>
+<br>
+<br>
+<button class="btn-danger btn-lg" {{action 'deleteListing' listing}}>Delete listing</button>
