@@ -21,10 +21,11 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-eval' https://*.firebaseio.com https://*.googleapis.com https://*.gstatic.com",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.firebaseio.com https://*.googleapis.com https://*.gstatic.com",
       'font-src': "'self' https://*.gstatic.com",
       'connect-src': "'self' wss://*.firebaseio.com",
       'img-src': "'self' *",
+      'report-uri':"'localhost'",
       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
       'frame-src': "'self' https://*.firebaseio.com"
     }
@@ -53,6 +54,14 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+  ENV['torii'] = {
+    providers: {
+      'facebook-oauth2': {
+        apiKey: '410282359085824',
+        redirectUri: 'http://localhost:4200'
+      }
+    }
+  };
 
   return ENV;
 };

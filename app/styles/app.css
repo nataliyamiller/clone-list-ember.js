@@ -1,3 +1,8 @@
+
+button.active {
+  display: none;
+}
+
 #listing-name {
   font-size: 45px;
   font-weight: bold;

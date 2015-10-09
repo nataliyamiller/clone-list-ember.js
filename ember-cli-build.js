@@ -2,9 +2,11 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
-    // Add options here
-  });
+  var app = new EmberApp({
+  pretender: {
+    enabled: true
+  }
+});
 
   app.import('bower_components/moment/moment.js')
   app.import('vendor/gmaps.js')
@@ -20,6 +22,11 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  // app.import('bower_components/normalize-css/normalize.css');
+
+app.import('bower_components/FakeXMLHttpRequest/fake_xml_http_request.js');
+app.import('bower_components/route-recognizer/dist/route-recognizer.js');
+app.import('bower_components/pretender/pretender.js');
 
   return app.toTree();
 };
